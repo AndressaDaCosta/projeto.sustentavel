@@ -1,0 +1,63 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2025-05-08T00:00:00.000Z",
+    "__export_source": "insomnia.desktop.app:v2023.5.8",
+    "resources": [
+      {
+        "_id": "wrk_1",
+        "name": "Crud Endpoints",
+        "_type": "workspace"
+      },
+      {
+        "_id": "env_1",
+        "parentId": "wrk_1",
+        "_type": "environment",
+        "name": "Base Environment",
+        "data": {
+          "base_url": "http://localhost:8080"
+        }
+      },
+      {
+        "_id": "req_organizations_post",
+        "parentId": "wrk_1",
+        "_type": "request",
+        "name": "POST /organizations",
+        "method": "POST",
+        "url": "{{ base_url }}/organizations",
+        "body": {
+          "mimeType": "application/json",
+          "text": "{\n  \"nome\": \"ONG Verde Limpo\",\n  \"contato\": \"contato@verdelimpo.org\"\n}"
+        }
+      },
+      {
+        "_id": "req_organizations_get",
+        "parentId": "wrk_1",
+        "_type": "request",
+        "name": "GET /organizations",
+        "method": "GET",
+        "url": "{{ base_url }}/organizations"
+      },
+      {
+        "_id": "req_projects_post",
+        "parentId": "wrk_1",
+        "_type": "request",
+        "name": "POST /projects",
+        "method": "POST",
+        "url": "{{ base_url }}/projects",
+        "body": {
+          "mimeType": "application/json",
+          "text": "{\n  \"nome\": \"Projeto Solar\",\n  \"descricao\": \"Instalação de painéis solares em escolas públicas\",\n  \"regiao\": \"Sul\",\n  \"estimativaReducaoCo2\": 25.5,\n  \"organizacao\": { \"id\": 1 }\n}"
+        }
+      },
+      {
+        "_id": "req_projects_get",
+        "parentId": "wrk_1",
+        "_type": "request",
+        "name": "GET /projects",
+        "method": "GET",
+        "url": "{{ base_url }}/projects"
+      }
+    ]
+  }
+  
