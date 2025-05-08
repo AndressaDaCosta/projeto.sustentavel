@@ -63,7 +63,12 @@ public class ProjetoController {
     }
 
     @GetMapping
-    public List<Projeto> getAll() {
+    public List<Projeto> getAll(
+            @RequestParam(required = false) String regiao,
+            @RequestParam(required = false) String nomeOrganizacao) {
+        if (regiao != null || nomeOrganizacao != null) {
+            return projetoService.findByRegiaoAndNomeOrganizacao(regiao, nomeOrganizacao);
+        }
         return projetoService.findAll();
     }
 

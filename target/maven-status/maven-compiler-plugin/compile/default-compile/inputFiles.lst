@@ -1,0 +1,10 @@
+/Users/andressacosta/projeto.sustentavel/src/main/java/com/project/projeto/sustentavel/Application.java
+/Users/andressacosta/projeto.sustentavel/src/main/java/com/project/projeto/sustentavel/controller/OrganizacaoController.java
+/Users/andressacosta/projeto.sustentavel/src/main/java/com/project/projeto/sustentavel/controller/ProjetoController.java
+/Users/andressacosta/projeto.sustentavel/src/main/java/com/project/projeto/sustentavel/dto/ProjetoRequestDTO.java
+/Users/andressacosta/projeto.sustentavel/src/main/java/com/project/projeto/sustentavel/model/Organizacao.java
+/Users/andressacosta/projeto.sustentavel/src/main/java/com/project/projeto/sustentavel/model/Projeto.java
+/Users/andressacosta/projeto.sustentavel/src/main/java/com/project/projeto/sustentavel/repository/OrganizacaoRepository.java
+/Users/andressacosta/projeto.sustentavel/src/main/java/com/project/projeto/sustentavel/repository/ProjetoRepository.java
+/Users/andressacosta/projeto.sustentavel/src/main/java/com/project/projeto/sustentavel/service/OrganizacaoService.java
+/Users/andressacosta/projeto.sustentavel/src/main/java/com/project/projeto/sustentavel/service/ProjetoService.java

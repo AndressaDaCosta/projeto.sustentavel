@@ -36,4 +36,9 @@ public class ProjetoService {
     public void deleteById(Long id) {
         projetoRepository.deleteById(id);
     }
+
+    public List<Projeto> findByRegiaoAndNomeOrganizacao(String regiao, String nomeOrganizacao) {
+        return projetoRepository.findByRegiaoAndNomeOrganizacao(regiao, nomeOrganizacao);
+    }
+
 }

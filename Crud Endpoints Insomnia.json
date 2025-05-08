@@ -4,75 +4,171 @@
 	"__export_date": "2025-05-08T00:00:00.000Z",
 	"__export_source": "insomnia.desktop.app:v2023.5.8",
 	"resources": [
-		{
-			"_id": "wrk_1",
-			"name": "Crud Endpoints",
-			"_type": "workspace"
-		},
-		{
-			"_id": "env_1",
-			"parentId": "wrk_1",
-			"_type": "environment",
-			"name": "Base Environment",
-			"data": {
-				"base_url": "http://localhost:8080"
-			}
-		},
-		{
-			"_id": "req_organizations_post",
-			"parentId": "wrk_1",
-			"_type": "request",
-			"name": "POST /organizations",
-			"method": "POST",
-			"url": "{{ base_url }}/organizations",
-			"body": {
-				"mimeType": "application/json",
-				"text": "{\n  \"nome\": \"ONG Verde Limpo\",\n  \"contato\": \"contato@verdelimpo.org\"\n}"
-			}
-		},
-		{
-			"_id": "req_organizations_get",
-			"parentId": "wrk_1",
-			"_type": "request",
-			"name": "GET /organizations",
-			"method": "GET",
-			"url": "{{ base_url }}/organizations"
-		},
-		{
-			"_id": "req_organizations_get_nome_verde",
-			"parentId": "wrk_1",
-			"_type": "request",
-			"name": "GET /organizations?nome=verde",
-			"method": "GET",
-			"url": "{{ base_url }}/organizations?nome=verde"
-		},
-		{
-			"_id": "req_organizations_get_nome_contato",
-			"parentId": "wrk_1",
-			"_type": "request",
-			"name": "GET /organizations?nome=verde&contato=contato@",
-			"method": "GET",
-			"url": "{{ base_url }}/organizations?nome=verde&contato=contato@"
-		},
-		{
-			"_id": "req_projects_post",
-			"parentId": "wrk_1",
-			"_type": "request",
-			"name": "POST /projects",
-			"method": "POST",
-			"url": "{{ base_url }}/projects",
-			"body": {
-				"mimeType": "application/json",
-				"text": "{\n  \"nome\": \"Projeto Solar\",\n  \"descricao\": \"Instalação de painéis solares em escolas públicas\",\n  \"regiao\": \"Sul\",\n  \"estimativaReducaoCo2\": 25.5,\n  \"organizacao\": { \"id\": 1 }\n}"
-			}
-		},
-		{
-			"_id": "req_projects_get",
-			"parentId": "wrk_1",
-			"_type": "request",
-			"name": "GET /projects",
-			"method": "GET",
-			"url": "{{ base_url }}/projects"
+	  {
+		"_id": "wrk_1",
+		"name": "Crud Endpoints",
+		"_type": "workspace"
+	  },
+	  {
+		"_id": "env_1",
+		"parentId": "wrk_1",
+		"_type": "environment",
+		"name": "Base Environment",
+		"data": {
+		  "base_url": "http://localhost:8080"
 		}
+	  },
+	  {
+		"_id": "req_organizations_post",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "POST /organizations",
+		"method": "POST",
+		"url": "{{ base_url }}/organizations",
+		"body": {
+		  "mimeType": "application/json",
+		  "text": "{\n  \"nome\": \"ONG Verde Limpo\",\n  \"contato\": \"contato@verdelimpo.org\"\n}"
+		},
+		"headers": [
+		  {
+			"name": "Content-Type",
+			"value": "application/json"
+		  }
+		]
+	  },
+	  {
+		"_id": "req_organizations_get",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "GET /organizations",
+		"method": "GET",
+		"url": "{{ base_url }}/organizations"
+	  },
+	  {
+		"_id": "req_organizations_get_nome_verde",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "GET /organizations?nome=verde",
+		"method": "GET",
+		"url": "{{ base_url }}/organizations?nome=verde"
+	  },
+	  {
+		"_id": "req_organizations_get_nome_contato",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "GET /organizations?nome=verde&contato=contato@",
+		"method": "GET",
+		"url": "{{ base_url }}/organizations?nome=verde&contato=contato@"
+	  },
+	  {
+		"_id": "req_projects_post",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "POST /projects",
+		"method": "POST",
+		"url": "{{ base_url }}/projects",
+		"body": {
+		  "mimeType": "application/json",
+		  "text": "{\n  \"nome\": \"Projeto Solar\",\n  \"descricao\": \"Instala\\u00e7\\u00e3o de pain\\u00e9is solares em escolas p\\u00fablicas\",\n  \"regiao\": \"Am\\u00e9rica do Sul\",\n  \"estimativaReducaoCo2\": 25.5,\n  \"organizacaoId\": 1\n}"
+		},
+		"headers": [
+		  {
+			"name": "Content-Type",
+			"value": "application/json"
+		  }
+		]
+	  },
+	  {
+		"_id": "req_projects_get",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "GET /projects",
+		"method": "GET",
+		"url": "{{ base_url }}/projects"
+	  },
+	  {
+		"_id": "req_projects_get_regiao",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "GET /projects?regiao=sul",
+		"method": "GET",
+		"url": "{{ base_url }}/projects?regiao=sul"
+	  },
+	  {
+		"_id": "req_projects_get_regiao_nomeorg",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "GET /projects?regiao=sul&nomeOrganizacao=verde",
+		"method": "GET",
+		"url": "{{ base_url }}/projects?regiao=sul&nomeOrganizacao=verde"
+	  },
+	  {
+		"_id": "req_organizations_get_by_id",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "GET /organizations/{id}",
+		"method": "GET",
+		"url": "{{ base_url }}/organizations/1"
+	  },
+	  {
+		"_id": "req_organizations_put",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "PUT /organizations/{id}",
+		"method": "PUT",
+		"url": "{{ base_url }}/organizations/1",
+		"body": {
+		  "mimeType": "application/json",
+		  "text": "{\n  \"nome\": \"ONG Verde Atualizada\",\n  \"contato\": \"contato@atualizada.org\"\n}"
+		},
+		"headers": [
+		  {
+			"name": "Content-Type",
+			"value": "application/json"
+		  }
+		]
+	  },
+	  {
+		"_id": "req_organizations_delete",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "DELETE /organizations/{id}",
+		"method": "DELETE",
+		"url": "{{ base_url }}/organizations/1"
+	  },
+	  {
+		"_id": "req_projects_get_by_id",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "GET /projects/{id}",
+		"method": "GET",
+		"url": "{{ base_url }}/projects/1"
+	  },
+	  {
+		"_id": "req_projects_put",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "PUT /projects/{id}",
+		"method": "PUT",
+		"url": "{{ base_url }}/projects/1",
+		"body": {
+		  "mimeType": "application/json",
+		  "text": "{\n  \"nome\": \"Projeto Solar Atualizado\",\n  \"descricao\": \"Atualiza\\u00e7\\u00e3o da instala\\u00e7\\u00e3o de pain\\u00e9is\",\n  \"regiao\": \"Sudeste\",\n  \"estimativaReducaoCo2\": 30.0,\n  \"organizacaoId\": 1\n}"
+		},
+		"headers": [
+		  {
+			"name": "Content-Type",
+			"value": "application/json"
+		  }
+		]
+	  },
+	  {
+		"_id": "req_projects_delete",
+		"parentId": "wrk_1",
+		"_type": "request",
+		"name": "DELETE /projects/{id}",
+		"method": "DELETE",
+		"url": "{{ base_url }}/projects/1"
+	  }
 	]
-}
+  }

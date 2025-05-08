@@ -1,0 +1,306 @@
+type: collection.insomnia.rest/5.0
+name: Crud Endpoints
+meta:
+  id: wrk_82c18f393a274253b16a5209ab22dd75
+  created: 1746730618261
+  modified: 1746730618261
+collection:
+  - url: "{{ base_url }}/organizations"
+    name: POST /organizations
+    meta:
+      id: req_682b0bb3e6164be49720c00df398bf7f
+      created: 1746730618264
+      modified: 1746730618264
+      isPrivate: false
+      sortKey: -1746730618264
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nome": "ONG Verde Limpo",
+          "contato": "contato@verdelimpo.org"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/organizations"
+    name: GET /organizations
+    meta:
+      id: req_e43ebf32e5154e8c933f12f7b626b9a8
+      created: 1746730618265
+      modified: 1746730618265
+      isPrivate: false
+      sortKey: -1746730618265
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/organizations?nome=verde&contato=contato@"
+    name: GET /organizations?nome=verde&contato=contato@
+    meta:
+      id: req_12a8a2517abe4bcc827a17a845f4ace0
+      created: 1746730618270
+      modified: 1746730618270
+      isPrivate: false
+      sortKey: -1746730618270
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/organizations?nome=verde"
+    name: GET /organizations?nome=verde
+    meta:
+      id: req_a1859ae4c1f34fef9faf328375434aff
+      created: 1746730618270
+      modified: 1746730618270
+      isPrivate: false
+      sortKey: -1746730618270
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/projects"
+    name: POST /projects
+    meta:
+      id: req_0da1db66e41f46768e5e515c8b6089d4
+      created: 1746730618271
+      modified: 1746730618271
+      isPrivate: false
+      sortKey: -1746730618271
+    method: POST
+    body:
+      mimeType: application/json
+      text: >-
+        {
+          "nome": "Projeto Solar",
+          "descricao": "Instala\u00e7\u00e3o de pain\u00e9is solares em escolas p\u00fablicas",
+          "regiao": "Am\u00e9rica do Sul",
+          "estimativaReducaoCo2": 25.5,
+          "organizacaoId": 1
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/projects"
+    name: GET /projects
+    meta:
+      id: req_b41bb90eabe64aacaf5bf30ad986e16e
+      created: 1746730618271
+      modified: 1746730618271
+      isPrivate: false
+      sortKey: -1746730618271
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/projects?regiao=sul"
+    name: GET /projects?regiao=sul
+    meta:
+      id: req_d7fa00cfc46443928ec8f993c316d795
+      created: 1746730618271
+      modified: 1746730618271
+      isPrivate: false
+      sortKey: -1746730618271
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/projects?regiao=sul&nomeOrganizacao=verde"
+    name: GET /projects?regiao=sul&nomeOrganizacao=verde
+    meta:
+      id: req_5bfb7f9cee0145519f6a04f19cfa2300
+      created: 1746730618272
+      modified: 1746730618272
+      isPrivate: false
+      sortKey: -1746730618272
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/organizations/1"
+    name: GET /organizations/{id}
+    meta:
+      id: req_c0e91fb6133b453aa10b332750b7de20
+      created: 1746730618272
+      modified: 1746730618272
+      isPrivate: false
+      sortKey: -1746730618272
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/organizations/1"
+    name: DELETE /organizations/{id}
+    meta:
+      id: req_556ad16a88a34dc0b8f26f57d8375606
+      created: 1746730618273
+      modified: 1746730618273
+      isPrivate: false
+      sortKey: -1746730618273
+    method: DELETE
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/organizations/1"
+    name: PUT /organizations/{id}
+    meta:
+      id: req_a7cd1ea91fc74fb5ae466a54852242f1
+      created: 1746730618273
+      modified: 1746730618273
+      isPrivate: false
+      sortKey: -1746730618273
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |-
+        {
+          "nome": "ONG Verde Atualizada",
+          "contato": "contato@atualizada.org"
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/projects/1"
+    name: GET /projects/{id}
+    meta:
+      id: req_1d8a2dd041ed4d7cb99c3e66aa113e57
+      created: 1746730618274
+      modified: 1746730618274
+      isPrivate: false
+      sortKey: -1746730618274
+    method: GET
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/projects/1"
+    name: PUT /projects/{id}
+    meta:
+      id: req_5a72d073b9a74fd883dd71157f4d1e56
+      created: 1746730618274
+      modified: 1746730618274
+      isPrivate: false
+      sortKey: -1746730618274
+    method: PUT
+    body:
+      mimeType: application/json
+      text: >-
+        {
+          "nome": "Projeto Solar Atualizado",
+          "descricao": "Atualiza\u00e7\u00e3o da instala\u00e7\u00e3o de pain\u00e9is",
+          "regiao": "Sudeste",
+          "estimativaReducaoCo2": 30.0,
+          "organizacaoId": 1
+        }
+    headers:
+      - name: Content-Type
+        value: application/json
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+  - url: "{{ base_url }}/projects/1"
+    name: DELETE /projects/{id}
+    meta:
+      id: req_82ab5a3810fc40739cdbdfc74a60bd6b
+      created: 1746730618275
+      modified: 1746730618275
+      isPrivate: false
+      sortKey: -1746730618275
+    method: DELETE
+    settings:
+      renderRequestBody: true
+      encodeUrl: true
+      followRedirects: global
+      cookies:
+        send: true
+        store: true
+      rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_3c1a0a3e8c4513faec6c6c3c87713bd39d39d616
+    created: 1746730618276
+    modified: 1746730618276
+environments:
+  name: Base Environment
+  meta:
+    id: env_e8fbceb10dba4aeda091435762ec779c
+    created: 1746730618263
+    modified: 1746730618263
+    isPrivate: false
+  data:
+    base_url: http://localhost:8080
