@@ -29,4 +29,8 @@ public class OrganizacaoService {
     public void deleteById(Long id) {
         repository.deleteById(id);
     }
+
+    public List<Organizacao> findByNomeAndContato(String nome, String contato) {
+        return repository.findByNomeAndContato(nome, contato);
+    }
 }

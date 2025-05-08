@@ -21,7 +21,12 @@ public class OrganizacaoController {
     }
 
     @GetMapping
-    public List<Organizacao> getAll() {
+    public List<Organizacao> getAll(
+            @RequestParam(required = false) String nome,
+            @RequestParam(required = false) String contato) {
+        if (nome != null || contato != null) {
+            return service.findByNomeAndContato(nome, contato);
+        }
         return service.findAll();
     }
 
